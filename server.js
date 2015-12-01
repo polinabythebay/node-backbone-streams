@@ -10,7 +10,7 @@ Globals
 var port = 8080;
 var ip = "127.0.0.1"; //alias for localhost
 //Simple route pattern matching
-var pattern = new UrlPattern('/streams/:id');
+var pattern = new UrlPattern('/streams/:id/');
 //currently storing POST requests in memory
 //dummy data
 var bucket = {
