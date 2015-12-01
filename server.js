@@ -10,10 +10,48 @@ Globals
 var port = 8080;
 var ip = "127.0.0.1"; //alias for localhost
 //Simple route pattern matching
-var pattern = new UrlPattern('/classes/:id');
+var pattern = new UrlPattern('/streams/:id');
 //currently storing POST requests in memory
+//dummy data
 var bucket = {
-  'results': []
+  'results': [
+      {
+      "createdAt": "2015-12-01T18:53:52.413Z",
+      "objectId": "F8baj0FytS",
+      "opponents": {
+        "__type": "Relation",
+        "className": "Player"
+      },
+      "roomname": "lobby",
+      "text": "Where is Rachel!",
+      "updatedAt": "2015-12-01T18:53:52.413Z",
+      "username": "SuperMan"
+    },
+    {
+      "createdAt": "2015-12-01T18:51:09.090Z",
+      "objectId": "YxFS3622N7",
+      "opponents": {
+        "__type": "Relation",
+        "className": "Player"
+      },
+      "roomname": "NEWROOM",
+      "text": "Batman",
+      "updatedAt": "2015-12-01T18:51:09.090Z",
+      "username": "fawn"
+    },
+    {
+      "createdAt": "2015-12-01T04:02:57.076Z",
+      "objectId": "3Wju8ywLZm",
+      "opponents": {
+        "__type": "Relation",
+        "className": "Player"
+      },
+      "roomname": "lobby",
+      "text": "akjdhfkasd",
+      "updatedAt": "2015-12-01T04:02:57.076Z",
+      "username": "benji"
+    }
+  ]
 };
 //allow for cross-origin resource sharing
 //allows to talk to different domains, ie. Backbone's index.html
@@ -40,6 +78,11 @@ var requestHandler = function(request, response) {
   headers['Content-Type'] = "application/json";
 
   if (pattern.match(request.url) || request.url === '/') {
+
+    //handle cross origin resource sharing
+      if (request.method === 'OPTIONS') {
+        write(response, 200, bucket, headers);
+      }
 
       if (request.method === 'POST') {
         var body = '';

@@ -9,15 +9,25 @@
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
   
-<!--   // <script src="data/data.js"></script>
-  // <script src="models/Song.js"></script>
-  // <script src="collections/Songs.js"></script>
-  // <script src="collections/PlayList.js"></script>
-  // <script src="views/SongListItemView.js"></script>
-  // <script src="views/SongListView.js"></script>
-  // <script src="views/PlayListItemView.js"></script>
-  // <script src="views/PlayListView.js"></script> -->
-  <script src="init.js"></script>
+  <!--   Backbone app files -->
+  <script src="models/Message.js"></script>
+  <script src="collections/Messages.js"></script>
+  <script src="views/SongListItemView.js"></script>
+  <script src="views/SongListView.js"></script>
+  <script src="views/PlayListItemView.js"></script>
+  <script src="views/PlayListView.js"></script>
+  
+  <div id="main">
+    <h1>data<em>streams</em></h1>
+    <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
+    <form action="#" id="send" method="post">
+      <input type="text" name="message" id="message"/>
+      <input type="submit" name="submit" class="submit"/>
+    </form>
+  </div>
+  <div id="chats"></div>
 
+  <!--   initialize Backbone app -->
+  <script src="init.js"></script>
 </body>
 </html>
