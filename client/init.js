@@ -4,5 +4,7 @@ $(function() {
   messages.loadMsgs();
   var formView = new FormView({el: $('#main'), collection: messages})
   var messagesView = new MessagesView({el: $('#chats'), collection: messages});
-  setInterval( messages.loadMsgs.bind(messages), 1000 );
+  messages.loadMsgs();
+  
+  // setInterval( messages.loadMsgs.bind(messages), 1000 );
 });

@@ -10,12 +10,12 @@ var MessagesView = Backbone.View.extend({
   },
 
   renderMessage: function(message){
-    if( !this.onscreenMessages[message.get('objectId')] ){
+    // if( !this.onscreenMessages[message.get('objectId')] ){
       var messageView = new MessageView({model: message});
       // console.log("messagesView", messageView);
       this.$el.prepend(messageView.render());
-      this.onscreenMessages[message.get('objectId')] = true;
-    }
+      // this.onscreenMessages[message.get('objectId')] = true;
+    // }
   }
 
 });

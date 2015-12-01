@@ -16,39 +16,21 @@ var pattern = new UrlPattern('/streams/:id/');
 var bucket = {
   'results': [
       {
-      "createdAt": "2015-12-01T18:53:52.413Z",
-      "objectId": "F8baj0FytS",
-      "opponents": {
-        "__type": "Relation",
-        "className": "Player"
-      },
+      "objectId" : false,
       "roomname": "lobby",
       "text": "Where is Rachel!",
-      "updatedAt": "2015-12-01T18:53:52.413Z",
       "username": "SuperMan"
     },
-    {
-      "createdAt": "2015-12-01T18:51:09.090Z",
-      "objectId": "YxFS3622N7",
-      "opponents": {
-        "__type": "Relation",
-        "className": "Player"
-      },
-      "roomname": "NEWROOM",
+    { 
+      "objectId" : false,
+      "roomname": "lobby",
       "text": "Batman",
-      "updatedAt": "2015-12-01T18:51:09.090Z",
       "username": "fawn"
     },
     {
-      "createdAt": "2015-12-01T04:02:57.076Z",
-      "objectId": "3Wju8ywLZm",
-      "opponents": {
-        "__type": "Relation",
-        "className": "Player"
-      },
+      "objectId" : false,
       "roomname": "lobby",
       "text": "akjdhfkasd",
-      "updatedAt": "2015-12-01T04:02:57.076Z",
       "username": "benji"
     }
   ]

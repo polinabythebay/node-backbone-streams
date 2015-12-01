@@ -17,6 +17,9 @@ Backbone supplies structure to JavaScript-heavy applications by providing models
 
 #### Handling Cross-Origin Resource Sharing with Node
 
+Whenever your browser needs to send a cross-origin request it will do so using the HTTP [Options](http://zacstewart.com/2012/04/14/http-options-method.html) method. Since our Backbone app will be served at a different domain than our Node.js server, the browser will initiate an OPTIONS request on the client's behalf. Our server will respond with a 200 and will have an Allow header with the list of HTTP resources Backbone can use.
+
+To start, run `nodemon server.js` to start the our server locally at `http://127.0.0.1:8080/`. Open Backbone at `client/index.html` to see it getting responses from the server.
 
 
 
