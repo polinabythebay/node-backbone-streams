@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/polinadotio/node-backbone-streams",
+  "authors": [
+    "Polina Soshnin <psoshnin@wellesley.edu>"
+  ],
+  "description": "backbone client",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4"
+  }
+}

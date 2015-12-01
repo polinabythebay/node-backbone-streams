@@ -23,7 +23,6 @@ var defaultCorsHeaders = {
   "access-control-allow-headers": "content-type, accept",
   "access-control-max-age": 10 // in seconds
 };
-
 //Class:http.ServerResponse
 var write = function(response, statusCode, data, headers) {
   response.writeHead(statusCode, headers);

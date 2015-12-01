@@ -2,7 +2,7 @@
   "name": "node-backbone-streams",
   "version": "1.0.0",
   "description": "getting started with node.js and backbone",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm test"
   },
